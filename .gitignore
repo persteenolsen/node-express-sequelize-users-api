@@ -1,0 +1,13 @@
+
+# Hide the info for database connection
+config.json
+
+swagger.yaml
+
+publish.js
+
+package-lock.json
+
+license
+
+node_modules/

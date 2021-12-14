@@ -1,0 +1,20 @@
+﻿
+{
+    "database": {
+        "host": "yourhostname",
+		"port": 3306,
+        "user": "yourusername",
+        "password": "yourpassword",
+        "database": "yourdbname"
+    },
+    "secret": "Your secret for protecting the API",
+    "emailFrom": "yoursendmailfrom",
+    "smtpOptions": {
+        "host": "yoursmtphost",
+        "port": 587,
+        "auth": {
+            "user": "yourusername",
+            "pass": "yourpassword"
+        }
+    }
+} 
