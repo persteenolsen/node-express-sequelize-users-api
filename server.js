@@ -14,24 +14,34 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-// allow cors requests from any origin and with credentials
+// Note: This route can be accessed because cors - credentials - true will be execute
+// by the statement below
+// Get a wakeup ping from the Client and response with a pong => "hello" in the "message" property !
+app.get('/hello', function (req, res) {
+   	
+	res.status(200).send( { message: 'hello from the server...'} );
+	console.log('NODE SERVER => Responding with a pong ...');
+	
+});
+
+// allow cors requests from any origin with credentials
 app.use(cors({ origin: (origin, callback) => callback(null, true), credentials: true }));
 
 // api routes
 app.use('/accounts', require('./accounts/accounts.controller'));
 
 // swagger docs route
-app.use('/api-docs', require('_helpers/swagger'));
+//app.use('/api-docs', require('_helpers/swagger'));
 
-
+// Note: Here this route will be blocked because because of the cors policy above 
+// and there will be a 401 status
 // Get a wakeup ping from the Client and response with a pong => "hello" in the "message" property !
-app.get('/hello', function (req, res) {
+/*app.get('/hello', function (req, res) {
    	
-	 res.status(200).send( { message: 'hello from the server...'} );
-	 console.log('NODE SERVER => Responding with a pong ...');
-	 
- });
-
+	res.status(200).send( { message: 'hello from the server...'} );
+	console.log('NODE SERVER => Responding with a pong ...');
+	
+}); */
 
 // global error handler
 app.use(errorHandler);
