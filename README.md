@@ -4,7 +4,7 @@ Node Express Sequelize MySQL API with Email Sign Up, Verification, Authenticatio
 
 # Last updated
 
-11-05-2024
+17-08-2024
 
 # Functionality of the Web App
 
