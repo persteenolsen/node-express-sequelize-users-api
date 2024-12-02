@@ -19,7 +19,7 @@ app.use(cookieParser());
 // Get a wakeup ping from the Client and response with a pong => "hello" in the "message" property !
 app.get('/hello', function (req, res) {
    	
-	res.status(200).send( { message: 'hello from the server - last updated: 17-08-2024'} );
+	res.status(200).send( { message: 'hello from the server - last updated: 02-12-2024'} );
 	console.log('NODE SERVER => Responding with a pong ...');
 	
 });
